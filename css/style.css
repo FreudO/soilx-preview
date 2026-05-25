@@ -624,160 +624,6 @@ footer a:hover {
   line-height: 1.6;
 }
 
-.team-page .section {
-  padding: 64px 0;
-}
-
-.team-section-heading {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 36px;
-}
-
-.team-section-heading__title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--text);
-  flex-shrink: 0;
-  margin: 0;
-}
-
-.team-section-heading__title::before {
-  content: '';
-  width: 4px;
-  height: 1.15em;
-  background: var(--green-main);
-  flex-shrink: 0;
-}
-
-.team-section-heading__rule {
-  flex: 1;
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 0;
-  min-width: 40px;
-}
-
-.team-quote {
-  background: var(--green-pale);
-  padding: 40px;
-  border-left: 6px solid var(--green-main);
-  margin: 0 0 8px;
-}
-
-.team-quote p {
-  font-family: 'Merriweather', Georgia, serif;
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--text);
-  line-height: 1.65;
-  margin: 0;
-}
-
-.team-grid {
-  display: grid;
-  gap: 24px;
-}
-
-.team-grid--3col {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.team-grid--4col {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.person-card {
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  padding: 24px;
-  text-align: center;
-}
-
-.person-card__portrait {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  display: block;
-  box-shadow: 0 0 0 3px var(--green-light);
-}
-
-.person-card--compact .person-card__portrait {
-  width: 100px;
-  height: 100px;
-}
-
-.person-card__name {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 4px;
-  color: var(--text);
-}
-
-.person-card__role {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-  margin: 0;
-}
-
-.person-card__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 12px;
-  color: var(--green-main);
-  transition: color 0.15s;
-}
-
-.person-card__link:hover {
-  color: var(--green-dark);
-  text-decoration: none;
-}
-
-@media (max-width: 1024px) {
-  .team-grid--3col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .team-grid--4col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .team-section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .team-section-heading__rule {
-    width: 100%;
-  }
-
-  .team-grid--3col,
-  .team-grid--4col {
-    grid-template-columns: 1fr;
-  }
-
-  .team-quote {
-    padding: 28px 24px;
-  }
-
-  .team-quote p {
-    font-size: 1.05rem;
-  }
-}
-
 /* —— Media page —— */
 .media-page {
   padding-bottom: 64px;
@@ -1439,4 +1285,227 @@ footer a:hover {
   .supporter-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ══════════════════════════════════════════
+   TEAM PAGE
+══════════════════════════════════════════ */
+
+/* All portrait images — CRITICAL: object-position: top center
+   so faces are never cut off regardless of the original photo */
+.person-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ── Section divider heading ── */
+.team-section {
+  padding: 64px 0 0;
+}
+.team-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.team-section-heading h2 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  margin: 0;
+}
+.team-section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── PI card — horizontal, prominent ── */
+.pi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.pi-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--green-main);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.pi-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+.pi-photo-wrap {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--green-pale);
+}
+.pi-card-info { flex: 1; min-width: 0; }
+.pi-card-info h3 { font-size: 1rem; margin-bottom: 3px; }
+.pi-card-info .role {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.pi-card-info .institution {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--green-main);
+}
+.pi-card-info .card-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-link-btn {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.card-link-btn:hover {
+  border-color: var(--green-main);
+  color: var(--green-main);
+}
+
+/* ── Student card — vertical, image fills top ── */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.student-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 680px;
+}
+.student-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.student-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+.student-photo-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--green-pale);
+}
+.student-card-info {
+  padding: 12px 14px 16px;
+  text-align: center;
+}
+.student-card-info h3 {
+  font-size: 0.92rem;
+  margin-bottom: 3px;
+}
+.student-card-info .role {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── Alumni — compact chip grid ── */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.alumni-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px 10px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.alumni-card:hover {
+  border-color: var(--green-light);
+  box-shadow: var(--shadow);
+}
+.alumni-photo-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  background: var(--green-pale);
+}
+.alumni-card h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.alumni-card .role {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.alumni-card .card-links {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ── Quote banner ── */
+.team-quote {
+  background: var(--green-pale);
+  border-left: 5px solid var(--green-main);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 26px 36px;
+  margin: 52px 0;
+}
+.team-quote p {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.12rem;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.75;
+}
+
+/* ── Team page responsive ── */
+@media (max-width: 1024px) {
+  .alumni-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 768px) {
+  .pi-grid { grid-template-columns: 1fr; }
+  .student-grid { grid-template-columns: repeat(2, 1fr); }
+  .student-grid-3 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+  .alumni-grid { grid-template-columns: repeat(3, 1fr); }
+  .pi-photo-wrap { width: 80px; height: 80px; }
+  .team-quote { padding: 20px 22px; }
+}
+@media (max-width: 480px) {
+  .alumni-grid { grid-template-columns: repeat(2, 1fr); }
 }
