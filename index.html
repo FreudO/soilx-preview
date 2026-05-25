@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoilX — Drone-Borne GPR Soil Moisture Research</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="SoilX" height="44">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="supporters.html">Supporters</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__content">
+    <p class="hero__eyebrow">Worcester Polytechnic Institute · WPI SoilX Lab</p>
+    <h1>Future Agriculture Via Intelligent Irrigation</h1>
+    <p class="hero__lead">We develop drone-borne Ground Penetrating Radar (GPR) with AI to create 3D soil moisture maps — enabling precise, water-efficient megafarm irrigation.</p>
+    <div class="hero__actions">
+      <a href="#research" class="btn">Our Research</a>
+      <a href="team.html" class="btn btn-outline btn-outline--light">Meet the Team</a>
+    </div>
+  </div>
+  <a href="#research" class="hero__scroll" aria-label="Scroll to research">
+    <span class="hero__scroll-icon"></span>
+  </a>
+</section>
+
+<!-- Stats -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-bar__grid">
+      <div class="stat">
+        <div class="stat__value">10+</div>
+        <div class="stat__label">Publications</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">15+</div>
+        <div class="stat__label">Team Members</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">3</div>
+        <div class="stat__label">Farm Sites</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">NSF</div>
+        <div class="stat__label">Funded</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research -->
+<section id="research" class="section">
+  <div class="container">
+    <h2 class="section-heading">Our Approach</h2>
+
+    <div class="research-block research-block--image-right">
+      <div class="research-block__text">
+        <h3>3D Soil Subsurface Imaging</h3>
+        <p>We redesign radar systems that integrate with drones and equip them with AI for soil subsurface 3D image creation and root-zone moisture classification. Farm irrigation designers use the classification to optimally allocate irrigation equipment and water resources.</p>
+      </div>
+      <div class="research-block__media">
+        <img src="images/content/homepage_subsurface_diagram.webp" alt="3D soil subsurface imaging diagram">
+      </div>
+    </div>
+
+    <div class="research-block research-block--image-left">
+      <div class="research-block__text">
+        <h3>GPR-Equipped Drone Platform</h3>
+        <p>We developed a Ground Penetrating Radar (GPR) and installed it on a drone to enable farm measurements. Measurements are conducted in our in-situ SoilX Lab at WPI with controlled soil conditions, and at real farmlands across the region.</p>
+      </div>
+      <div class="research-block__media">
+        <img src="images/content/homepage_gpr_drone.webp" alt="GPR-equipped drone platform">
+      </div>
+    </div>
+
+    <div class="research-block research-block--image-right">
+      <div class="research-block__text">
+        <h3>Machine Learning Signal Processing</h3>
+        <p>The drone-mounted radar converts received signals into 3D moisture and texture maps via machine learning. Output can be visualized as cross-sections or 3D models of the subsurface, enabling understanding of soil layers, moisture pockets, and irrigation zones.</p>
+      </div>
+      <div class="research-block__media">
+        <img src="images/content/homepage_ml_approach.webp" alt="Machine learning signal processing workflow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lab -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-heading">The SoilX Lab</h2>
+    <p class="lab-intro">An in-situ laboratory at WPI for controlled soil measurements. We excavated a 30×20×3 ft area and equipped it for precise GPR data collection — enabling labeled datasets for supervised machine learning.</p>
+    <div class="lab-gallery">
+      <img src="images/content/homepage_lab_setup_1.webp" alt="SoilX lab setup view 1">
+      <img src="images/content/homepage_lab_setup_2.webp" alt="SoilX lab setup view 2">
+      <img src="images/content/homepage_lab_setup_3.webp" alt="SoilX lab setup view 3">
+    </div>
+  </div>
+</section>
+
+<!-- Synthetic data -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading">Synthetic Data Generation</h2>
+    <div class="synthetic-grid">
+      <div class="synthetic-grid__text">
+        <p>Synthetic data is generated using gprMax software, based on Maxwell equations and FDTD models. This augments real measurements, enabling robust ML model training across diverse soil conditions.</p>
+      </div>
+      <div class="synthetic-grid__media">
+        <img src="images/content/homepage_fdtd_geometry.webp" alt="FDTD geometry for GPR synthetic data generation">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications teaser -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-heading">Recent Publications</h2>
+    <div class="pub-grid">
+      <a href="publications.html" class="card pub-card">
+        <span class="badge">Journal</span>
+        <h3>Advancing Precision Agriculture: Machine Learning-Enhanced GPR Analysis</h3>
+        <p class="pub-card__venue">IEEE Transactions on AgriFood Electronics, 2024</p>
+      </a>
+      <a href="publications.html" class="card pub-card">
+        <span class="badge">Journal</span>
+        <h3>Toward Mega-Farm Optimized Irrigation: Novel Drone-borne Synthetic GPR-Data Analysis</h3>
+        <p class="pub-card__venue">Submitted to IEEE Transactions on AgriFood Electronics</p>
+      </a>
+      <a href="publications.html" class="card pub-card">
+        <span class="badge">Journal</span>
+        <h3>FDTD Medium Dimension Selection Guidelines for GPR Synthetic Data Generation</h3>
+        <p class="pub-card__venue">IEEE Geoscience and Remote Sensing Letters, 2025</p>
+      </a>
+    </div>
+    <p class="pub-teaser__link-wrap">
+      <a href="publications.html" class="pub-teaser__link">View All Publications →</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.webp" alt="SoilX" height="48" style="filter:brightness(0) invert(1); margin-bottom:12px;">
+        <p style="font-size:0.9rem; opacity:0.75; max-width:240px;">Intelligent drone-borne GPR for precision agriculture and soil moisture mapping.</p>
+      </div>
+      <div>
+        <h4 style="color:white; margin-bottom:14px;">Pages</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="supporters.html">Supporters</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white; margin-bottom:14px;">Contact</h4>
+        <p style="font-size:0.9rem; opacity:0.75;">Worcester Polytechnic Institute<br>100 Institute Rd<br>Worcester, MA 01609</p>
+        <p style="margin-top:12px; font-size:0.9rem;"><a href="https://soilx.wpi.edu">soilx.wpi.edu</a></p>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 SoilX, Worcester Polytechnic Institute. All rights reserved.</div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
