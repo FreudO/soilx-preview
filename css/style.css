@@ -624,6 +624,20 @@ footer a:hover {
   line-height: 1.6;
 }
 
+.page-hero--quote {
+  height: auto;
+  min-height: 240px;
+  padding: 48px 24px;
+}
+
+.page-hero--quote .page-hero__inner {
+  max-width: 700px;
+}
+
+.page-hero--quote h1 {
+  margin-bottom: 20px;
+}
+
 /* —— Media page —— */
 .media-page {
   padding-bottom: 64px;
@@ -1477,21 +1491,15 @@ footer a:hover {
   flex-wrap: wrap;
 }
 
-/* ── Quote banner ── */
-.team-quote {
-  background: var(--green-pale);
-  border-left: 5px solid var(--green-main);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 26px 36px;
-  margin: 52px 0;
-}
-.team-quote p {
+.quote-text {
   font-family: 'Merriweather', serif;
   font-style: italic;
-  font-size: 1.12rem;
-  color: var(--text);
-  margin: 0;
-  line-height: 1.75;
+  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.85;
+  letter-spacing: 0.015em;
 }
 
 /* ── Team page responsive ── */
@@ -1504,7 +1512,6 @@ footer a:hover {
   .student-grid-3 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
   .alumni-grid { grid-template-columns: repeat(3, 1fr); }
   .pi-photo-wrap { width: 80px; height: 80px; }
-  .team-quote { padding: 20px 22px; }
 }
 @media (max-width: 480px) {
   .alumni-grid { grid-template-columns: repeat(2, 1fr); }
