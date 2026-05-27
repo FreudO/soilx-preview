@@ -26,42 +26,106 @@
   </div>
 </nav>
 
-<!-- Hero -->
 <section class="hero">
-  <div class="hero__content">
-    <p class="hero__eyebrow">Worcester Polytechnic Institute · WPI SoilX Lab</p>
-    <h1>Future Agriculture Via Intelligent Irrigation</h1>
-    <p class="hero__lead">We develop drone-borne Ground Penetrating Radar (GPR) with AI to create 3D soil moisture maps — enabling precise, water-efficient megafarm irrigation.</p>
-    <div class="hero__actions">
-      <a href="#research" class="btn">Our Research</a>
-      <a href="team.html" class="btn btn-outline btn-outline--light">Meet the Team</a>
+  <!-- Background image overlay — opacity raised to 0.42 -->
+  <div class="hero-bg-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Worcester Polytechnic Institute · WPI SoilX Lab · NSF Funded</p>
+    <h1 class="hero-title">Future agriculture via<br>intelligent irrigation</h1>
+    <p class="hero-sub">
+      We develop drone-borne Ground Penetrating Radar (GPR) with AI to create
+      3D soil moisture maps — enabling precise, water-efficient megafarm irrigation.
+    </p>
+    <div class="hero-buttons">
+      <a href="publications.html" class="btn">View publications</a>
+      <a href="team.html" class="btn btn-outline-white">Meet the team</a>
+    </div>
+
+    <!-- Frosted stat pills — replace the old separate stats bar -->
+    <div class="hero-stats">
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">10+</span>
+        <span class="hero-stat-lbl">Publications</span>
+      </div>
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">15+</span>
+        <span class="hero-stat-lbl">Team members</span>
+      </div>
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-lbl">Farm sites</span>
+      </div>
+      <div class="hero-stat-pill">
+        <span class="hero-stat-num">NSF</span>
+        <span class="hero-stat-lbl">Funded</span>
+      </div>
     </div>
   </div>
-  <a href="#research" class="hero__scroll" aria-label="Scroll to research">
-    <span class="hero__scroll-icon"></span>
-  </a>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <span class="scroll-arrow"></span>
+  </div>
 </section>
 
-<!-- Stats -->
-<section class="stats-bar">
+<section class="pipeline-section">
   <div class="container">
-    <div class="stats-bar__grid">
-      <div class="stat">
-        <div class="stat__value">10+</div>
-        <div class="stat__label">Publications</div>
+    <h2 class="section-heading animate-on-scroll">How it works</h2>
+    <p class="pipeline-intro animate-on-scroll">
+      From a single drone flight over a megafarm to a precision-ready irrigation map —
+      the full pipeline runs on our custom GPR hardware and AI models.
+    </p>
+    <div class="pipeline-track">
+
+      <div class="pipeline-step animate-on-scroll">
+        <div class="pipeline-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <p class="pipeline-step-name">Drone flight</p>
+        <p class="pipeline-step-desc">GPR antenna mounted on drone flies a grid pattern over the farm field.</p>
       </div>
-      <div class="stat">
-        <div class="stat__value">15+</div>
-        <div class="stat__label">Team Members</div>
+
+      <div class="pipeline-connector" aria-hidden="true"></div>
+
+      <div class="pipeline-step animate-on-scroll">
+        <div class="pipeline-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <p class="pipeline-step-name">GPR signal capture</p>
+        <p class="pipeline-step-desc">Radar pulses penetrate 3+ ft underground and reflections are recorded in real time.</p>
       </div>
-      <div class="stat">
-        <div class="stat__value">3</div>
-        <div class="stat__label">Farm Sites</div>
+
+      <div class="pipeline-connector" aria-hidden="true"></div>
+
+      <div class="pipeline-step animate-on-scroll">
+        <div class="pipeline-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <p class="pipeline-step-name">AI / ML processing</p>
+        <p class="pipeline-step-desc">Trained neural networks classify raw signals into moisture levels and soil layers.</p>
       </div>
-      <div class="stat">
-        <div class="stat__value">NSF</div>
-        <div class="stat__label">Funded</div>
+
+      <div class="pipeline-connector" aria-hidden="true"></div>
+
+      <div class="pipeline-step animate-on-scroll">
+        <div class="pipeline-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <p class="pipeline-step-name">3D moisture map</p>
+        <p class="pipeline-step-desc">Output is a volumetric 3D subsurface model showing root-zone moisture distribution.</p>
       </div>
+
+      <div class="pipeline-connector" aria-hidden="true"></div>
+
+      <div class="pipeline-step animate-on-scroll">
+        <div class="pipeline-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="6"/><path d="M5 12H2"/><path d="M22 12h-3"/><path d="M12 18v4"/><circle cx="12" cy="12" r="4"/><path d="M12 8a4 4 0 0 1 4 4"/></svg>
+        </div>
+        <p class="pipeline-step-name">Precision irrigation</p>
+        <p class="pipeline-step-desc">Irrigation designers use the map to allocate water only where and how deep it's needed.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -70,6 +134,43 @@
 <section id="research" class="section">
   <div class="container">
     <h2 class="section-heading">Our Approach</h2>
+
+    <div class="pillar-grid animate-on-scroll">
+
+      <div class="pillar-card">
+        <div class="pillar-card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3 class="pillar-card-title">3D subsurface imaging</h3>
+        <p class="pillar-card-text">
+          Radar systems redesigned for drone integration, enabling 3D root-zone
+          soil moisture maps across megafarm fields.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="pillar-card-title">GPR drone platform</h3>
+        <p class="pillar-card-text">
+          Custom airborne GPR tested in WPI's in-situ lab and at real farmlands
+          across the region, under controlled and live conditions.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="pillar-card-title">ML signal processing</h3>
+        <p class="pillar-card-text">
+          Machine learning converts raw GPR signals into classified moisture
+          maps — augmented by synthetic data from gprMax FDTD simulations.
+        </p>
+      </div>
+
+    </div>
 
     <div class="research-block research-block--image-right">
       <div class="research-block__text">
@@ -135,26 +236,61 @@
 <section class="section section-alt">
   <div class="container">
     <h2 class="section-heading">Recent Publications</h2>
-    <div class="pub-grid">
-      <a href="publications.html" class="card pub-card">
-        <span class="badge">Journal</span>
-        <h3>Advancing Precision Agriculture: Machine Learning-Enhanced GPR Analysis</h3>
-        <p class="pub-card__venue">IEEE Transactions on AgriFood Electronics, 2024</p>
-      </a>
-      <a href="publications.html" class="card pub-card">
-        <span class="badge">Journal</span>
-        <h3>Toward Mega-Farm Optimized Irrigation: Novel Drone-borne Synthetic GPR-Data Analysis</h3>
-        <p class="pub-card__venue">Submitted to IEEE Transactions on AgriFood Electronics</p>
-      </a>
-      <a href="publications.html" class="card pub-card">
-        <span class="badge">Journal</span>
-        <h3>FDTD Medium Dimension Selection Guidelines for GPR Synthetic Data Generation</h3>
-        <p class="pub-card__venue">IEEE Geoscience and Remote Sensing Letters, 2025</p>
-      </a>
+    <div class="pub-strip">
+
+      <!-- 1. Most recent: published May 2026 -->
+      <div class="pub-strip-item animate-on-scroll">
+        <div class="pub-strip-bar"></div>
+        <div class="pub-strip-body">
+          <p class="pub-strip-title">
+            Toward Intelligent GPR: Wavelet Scattering Networks for Soil Water
+            Content Prediction
+          </p>
+          <p class="pub-strip-meta">
+            IEEE Transactions on AgriFood Electronics
+            <span class="pub-year-badge pub-badge-journal">Journal · 2026</span>
+          </p>
+        </div>
+        <a href="publications.html" class="pub-strip-link" aria-label="View publication">→</a>
+      </div>
+
+      <!-- 2. Journal 2025 -->
+      <div class="pub-strip-item animate-on-scroll">
+        <div class="pub-strip-bar"></div>
+        <div class="pub-strip-body">
+          <p class="pub-strip-title">
+            FDTD Medium Dimension Selection Guidelines for GPR Synthetic Data
+            Generation
+          </p>
+          <p class="pub-strip-meta">
+            IEEE Geoscience and Remote Sensing Letters, vol. 22
+            <span class="pub-year-badge pub-badge-journal">Journal · 2025</span>
+          </p>
+        </div>
+        <a href="pdfs/fdtd_medium_dimension_guidelines.pdf" target="_blank" rel="noopener" class="pub-strip-link" aria-label="Download PDF">PDF →</a>
+      </div>
+
+      <!-- 3. Journal 2024 -->
+      <div class="pub-strip-item animate-on-scroll">
+        <div class="pub-strip-bar"></div>
+        <div class="pub-strip-body">
+          <p class="pub-strip-title">
+            Advancing Precision Agriculture: Machine Learning-Enhanced GPR Analysis
+            for Root-Zone Soil Moisture Assessment in Mega Farms
+          </p>
+          <p class="pub-strip-meta">
+            IEEE Transactions on AgriFood Electronics
+            <span class="pub-year-badge pub-badge-journal">Journal · 2024</span>
+          </p>
+        </div>
+        <a href="pdfs/advancing_precision_agriculture_gpr_ml.pdf" target="_blank" rel="noopener" class="pub-strip-link" aria-label="Download PDF">PDF →</a>
+      </div>
+
     </div>
-    <p class="pub-teaser__link-wrap">
-      <a href="publications.html" class="pub-teaser__link">View All Publications →</a>
-    </p>
+
+    <div style="text-align: center; margin-top: 36px;">
+      <a href="publications.html" class="btn btn-outline">View all publications →</a>
+    </div>
   </div>
 </section>
 
