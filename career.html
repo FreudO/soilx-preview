@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Career — SoilX</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js"></script>
 </head>
 <body>
 
@@ -22,6 +23,7 @@
       <li><a href="education.html">Education</a></li>
       <li><a href="career.html" class="nav-cta">Join us</a></li>
       <li><a href="supporters.html">Supporters</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
     </ul>
   </div>
 </nav>
@@ -102,6 +104,51 @@
       </ol>
     </div>
   </section>
+
+<!-- ── Password-protected section ── -->
+<section class="section section-alt">
+  <div class="container">
+
+    <h2 class="section-heading">Internal resources</h2>
+
+    <!-- Gate — shown when locked -->
+    <div id="career-gate" class="password-gate">
+      <div class="pg-card">
+        <div class="pg-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <p class="pg-title">Restricted access</p>
+        <p class="pg-subtitle">This section contains internal resources for SoilX team members.</p>
+        <form class="pg-form">
+          <input
+            class="pg-input"
+            type="password"
+            placeholder="Enter password"
+            autocomplete="current-password"
+            aria-label="Password"
+          >
+          <button class="pg-submit" type="submit">Unlock</button>
+          <p class="pg-error" role="alert"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Protected content — hidden until unlocked -->
+    <div id="career-protected" class="protected-content">
+      <p style="color: var(--text-muted); font-size: 0.97rem; line-height: 1.7; max-width: 640px;">
+        Internal resources will appear here. Add any restricted content
+        (application templates, internal guidelines, contact details, etc.)
+        inside this div.
+      </p>
+    </div>
+
+  </div>
+</section>
 </main>
 
 <footer>
@@ -131,5 +178,10 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    SoilXAuth.initGate('career-gate', 'career-protected');
+  });
+</script>
 </body>
 </html>

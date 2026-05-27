@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot | SoilX — WPI Research Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/auth.js"></script>
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="SoilX" height="44">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="career.html" class="nav-cta">Join us</a></li>
+      <li><a href="supporters.html">Supporters</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Page hero ── -->
+<section style="background: linear-gradient(135deg, #1B5E20, #2E7D32); height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 24px;">
+  <h1 style="color: #fff; font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 10px;">SoilX Chatbot</h1>
+  <p style="color: rgba(255,255,255,0.78); font-size: 1rem;">Restricted access</p>
+</section>
+
+<main>
+  <div class="container" style="padding: 0 0 80px;">
+
+    <!-- Gate -->
+    <div id="chatbot-gate" class="password-gate" style="padding: 80px 24px;">
+      <div class="pg-card">
+        <div class="pg-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <p class="pg-title">Password required</p>
+        <p class="pg-subtitle">The SoilX chatbot is available to authorized users only.</p>
+        <form class="pg-form">
+          <input
+            class="pg-input"
+            type="password"
+            placeholder="Enter password"
+            autocomplete="current-password"
+            aria-label="Password"
+          >
+          <button class="pg-submit" type="submit">Unlock</button>
+          <p class="pg-error" role="alert"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Protected chatbot content -->
+    <div id="chatbot-protected" class="protected-content" style="padding: 60px 0;">
+      <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+        <div style="width: 64px; height: 64px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--green-main);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h2 style="font-family: 'Merriweather', serif; font-size: 1.6rem; margin-bottom: 12px;">SoilX Chatbot</h2>
+        <p style="color: var(--text-muted); font-size: 0.97rem; line-height: 1.7; max-width: 480px; margin: 0 auto 32px;">
+          The chatbot interface will be embedded here. Replace this placeholder
+          with the actual chatbot embed code when it is ready.
+        </p>
+        <div style="background: var(--green-pale); border: 1px dashed var(--green-light); border-radius: var(--radius-lg); padding: 48px 24px; color: var(--text-muted); font-size: 0.9rem;">
+          Chatbot embed — coming soon
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p style="font-size:0.9rem; opacity:0.75; max-width:240px;">Intelligent drone-borne GPR for precision agriculture and soil moisture mapping.</p>
+      </div>
+      <div>
+        <h4 style="color:white; margin-bottom:14px;">Pages</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="supporters.html">Supporters</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white; margin-bottom:14px;">Contact</h4>
+        <p style="font-size:0.9rem; opacity:0.75;">Worcester Polytechnic Institute<br>100 Institute Rd<br>Worcester, MA 01609</p>
+        <p style="margin-top:12px; font-size:0.9rem;"><a href="https://soilx.wpi.edu">soilx.wpi.edu</a></p>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 SoilX, Worcester Polytechnic Institute. All rights reserved.</div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    SoilXAuth.initGate('chatbot-gate', 'chatbot-protected');
+  });
+</script>
+</body>
+</html>
