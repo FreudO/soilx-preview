@@ -624,20 +624,6 @@ footer a:hover {
   line-height: 1.6;
 }
 
-.page-hero--quote {
-  height: auto;
-  min-height: 240px;
-  padding: 48px 24px;
-}
-
-.page-hero--quote .page-hero__inner {
-  max-width: 700px;
-}
-
-.page-hero--quote h1 {
-  margin-bottom: 20px;
-}
-
 /* —— Media page —— */
 .media-page {
   padding-bottom: 64px;
@@ -661,6 +647,21 @@ footer a:hover {
   background: var(--surface);
   color: var(--text-muted);
   transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.media-tab__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  vertical-align: text-bottom;
+}
+
+.media-tab__icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .media-tab:hover {
@@ -709,13 +710,15 @@ footer a:hover {
   transform: translate(-50%, -50%);
   width: 64px;
   height: 64px;
-  background: rgba(255, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.32);
+  border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s;
   pointer-events: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .yt-facade__play::after {
@@ -867,8 +870,15 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  color: var(--green-main);
+  font-size: 0;
   flex-shrink: 0;
+}
+
+.audio-card__icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 .audio-card__label {
@@ -1302,11 +1312,10 @@ footer a:hover {
 }
 
 /* ══════════════════════════════════════════
-   TEAM PAGE
+   TEAM PAGE — OPTION D
 ══════════════════════════════════════════ */
 
-/* All portrait images — CRITICAL: object-position: top center
-   so faces are never cut off regardless of the original photo */
+/* Portrait image — top-biased so faces stay visible */
 .person-photo {
   width: 100%;
   height: 100%;
@@ -1315,43 +1324,49 @@ footer a:hover {
   display: block;
 }
 
-/* ── Section divider heading ── */
-.team-section {
-  padding: 64px 0 0;
-}
-.team-section-heading {
+/* ── Team page hero ── */
+.team-hero {
+  background: linear-gradient(135deg, #1B5E20, #2E7D32);
+  min-height: 260px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 32px;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
 }
-.team-section-heading h2 {
-  font-size: 1.5rem;
-  white-space: nowrap;
+.team-hero h1 {
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 16px;
+}
+.team-hero-quote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+  line-height: 1.85;
+  letter-spacing: 0.015em;
   margin: 0;
 }
-.team-section-heading::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
 
-/* ── PI card — horizontal, prominent ── */
-.pi-grid {
+/* ── PI strip ── */
+.pi-strip {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 0;
 }
 .pi-card {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   background: var(--surface);
   border-radius: var(--radius-lg);
-  padding: 22px;
-  box-shadow: var(--shadow);
   border-left: 4px solid var(--green-main);
+  padding: 18px 18px 18px 14px;
+  box-shadow: var(--shadow);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .pi-card:hover {
@@ -1364,155 +1379,128 @@ footer a:hover {
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  background: var(--green-pale);
+  background: #f0f0f0;
+  border: 1px solid var(--border);
 }
-.pi-card-info { flex: 1; min-width: 0; }
-.pi-card-info h3 { font-size: 1rem; margin-bottom: 3px; }
-.pi-card-info .role {
-  font-size: 0.82rem;
+/* Show full portrait inside circle — no cover crop */
+.pi-photo-wrap .person-photo {
+  object-fit: contain;
+  object-position: center center;
+}
+.pi-info { flex: 1; min-width: 0; }
+.pi-info .pi-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pi-info .pi-role {
+  font-size: 0.76rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.4;
 }
-.pi-card-info .institution {
-  display: inline-block;
-  margin-top: 7px;
-  font-size: 0.72rem;
+.pi-info .pi-inst {
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   color: var(--green-main);
+  margin-top: 5px;
+  display: block;
 }
-.pi-card-info .card-links {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.card-link-btn {
-  font-size: 0.72rem;
-  padding: 4px 10px;
-  border-radius: 4px;
+.pi-link {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 0.68rem;
+  padding: 3px 9px;
   border: 1px solid var(--border);
+  border-radius: 4px;
   color: var(--text-muted);
   text-decoration: none;
   transition: border-color 0.15s, color 0.15s;
-  white-space: nowrap;
 }
-.card-link-btn:hover {
+.pi-link:hover {
   border-color: var(--green-main);
   color: var(--green-main);
 }
 
-/* ── Student card — vertical, image fills top ── */
-.student-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+/* ── Section divider ── */
+.team-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 48px 0 20px;
 }
-.student-grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  max-width: 680px;
+.team-divider:first-of-type {
+  margin-top: 40px;
 }
-.student-card {
+.team-divider h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  margin: 0;
+}
+.team-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Uniform member card (students + alumni) ── */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.member-card {
   background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  text-align: center;
   transition: box-shadow 0.2s, transform 0.2s;
 }
-.student-card:hover {
+.member-card:hover {
   box-shadow: var(--shadow-hover);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
-.student-photo-wrap {
+.member-photo-wrap {
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--green-pale);
 }
-.student-card-info {
-  padding: 12px 14px 16px;
-  text-align: center;
+.member-info {
+  padding: 10px 8px 13px;
 }
-.student-card-info h3 {
-  font-size: 0.92rem;
-  margin-bottom: 3px;
+.member-info .m-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+  line-height: 1.3;
 }
-.student-card-info .role {
-  font-size: 0.76rem;
+.member-info .m-role {
+  font-size: 0.72rem;
   color: var(--text-muted);
   line-height: 1.4;
 }
 
-/* ── Alumni — compact chip grid ── */
-.alumni-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-}
-.alumni-card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 16px 10px;
-  text-align: center;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.06);
-  border: 1px solid var(--border);
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-.alumni-card:hover {
-  border-color: var(--green-light);
-  box-shadow: var(--shadow);
-}
-.alumni-photo-wrap {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 10px;
-  background: var(--green-pale);
-}
-.alumni-card h4 {
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 3px;
-}
-.alumni-card .role {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-}
-.alumni-card .card-links {
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.quote-text {
-  font-family: 'Merriweather', serif;
-  font-style: italic;
-  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.85;
-  letter-spacing: 0.015em;
-}
-
-/* ── Team page responsive ── */
+/* ── Responsive ── */
 @media (max-width: 1024px) {
-  .alumni-grid { grid-template-columns: repeat(4, 1fr); }
+  .pi-strip { grid-template-columns: repeat(2, 1fr); }
+  .member-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (max-width: 768px) {
-  .pi-grid { grid-template-columns: 1fr; }
-  .student-grid { grid-template-columns: repeat(2, 1fr); }
-  .student-grid-3 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
-  .alumni-grid { grid-template-columns: repeat(3, 1fr); }
-  .pi-photo-wrap { width: 80px; height: 80px; }
+  .pi-strip { grid-template-columns: 1fr; }
+  .member-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 480px) {
-  .alumni-grid { grid-template-columns: repeat(2, 1fr); }
+  .member-grid { grid-template-columns: repeat(2, 1fr); }
+  .pi-photo-wrap { width: 84px; height: 84px; }
 }
