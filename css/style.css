@@ -1812,12 +1812,11 @@ footer a:hover {
 }
 .pi-photo-wrap {
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   overflow: hidden;
-  background: #f0f0f0;
-  border: 1px solid var(--border);
+  background: var(--green-pale);
 }
 /* Show full portrait inside circle — no cover crop */
 .pi-photo-wrap .person-photo {
@@ -1897,29 +1896,33 @@ footer a:hover {
 .member-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
+  border-radius: var(--radius-lg);
   text-align: center;
+  padding: 20px 10px 16px;
   transition: box-shadow 0.2s, transform 0.2s;
+  /* Note: remove overflow:hidden — the photo is now inside, not full-bleed */
 }
 .member-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-3px);
 }
 .member-photo-wrap {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
   overflow: hidden;
   background: var(--green-pale);
+  margin: 0 auto 12px;
+  flex-shrink: 0;
 }
 .member-info {
-  padding: 10px 8px 13px;
+  padding: 0 4px;
 }
 .member-info .m-name {
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   line-height: 1.3;
 }
 .member-info .m-role {
@@ -1939,7 +1942,7 @@ footer a:hover {
 }
 @media (max-width: 480px) {
   .member-grid { grid-template-columns: repeat(2, 1fr); }
-  .pi-photo-wrap { width: 84px; height: 84px; }
+  .pi-photo-wrap { width: 68px; height: 68px; }
 }
 
 /* ═══════════════════════════════════════════════
