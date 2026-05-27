@@ -2657,6 +2657,10 @@ footer {
     margin: 0 auto;
   }
 
+  .supporters-banner {
+    flex-direction: column !important;
+  }
+
 }
 
 /* ═══════════════════════════════════════════════

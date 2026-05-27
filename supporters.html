@@ -35,34 +35,81 @@
 </section>
 
 <main class="supporters-page">
-  <section class="section">
-    <div class="container">
-      <p class="page-intro page-intro--center">SoilX research is supported through federal grants and institutional partnerships focused on advancing precision agriculture and sustainable water management.</p>
+<section class="section">
+  <div class="container" style="max-width: 800px;">
 
-      <div class="supporter-grid">
-        <div class="card supporter-card">
-          <p class="supporter-card__name">National Science Foundation</p>
-          <p class="supporter-card__subtitle">NSF</p>
-        </div>
-        <div class="card supporter-card">
-          <p class="supporter-card__name">Worcester Polytechnic Institute</p>
-          <p class="supporter-card__subtitle">WPI</p>
-        </div>
-        <div class="card supporter-card">
-          <p class="supporter-card__name">Michigan Technological University</p>
-          <p class="supporter-card__subtitle">Michigan Tech</p>
-        </div>
-        <div class="card supporter-card">
-          <p class="supporter-card__name">Michigan Tech Research Institute</p>
-          <p class="supporter-card__subtitle">MTRI</p>
-        </div>
-        <div class="card supporter-card">
-          <p class="supporter-card__name">Soil and Water Conservation Society</p>
-          <p class="supporter-card__subtitle">SWCS</p>
-        </div>
+    <!-- Dark green funding banner -->
+    <div class="supporters-banner" style="background: var(--green-dark); border-radius: var(--radius-lg);
+                padding: 64px 56px; display: flex; align-items: center;
+                justify-content: space-between; gap: 48px; margin-bottom: 48px;">
+
+      <!-- Left: text -->
+      <div style="flex: 1;">
+        <p style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;
+                  text-transform: uppercase; color: var(--green-light);
+                  margin-bottom: 16px;">Federal Funding</p>
+        <h2 style="font-family: 'Merriweather', serif; font-size: 1.45rem;
+                   font-weight: 700; color: #ffffff; line-height: 1.4;
+                   margin-bottom: 14px;">
+          Supported by the U.S. Department of Agriculture
+        </h2>
+        <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65);
+                  line-height: 1.75; margin-bottom: 24px; max-width: 320px;">
+          SoilX research is funded through a federal grant advancing
+          precision agriculture and sustainable water management.
+        </p>
+        <a
+          href="https://www.wpi.edu/news/seyed-zekavat-leads-11-million-project-develop-system-will-create-soil-moisture-maps-farmers"
+          target="_blank"
+          rel="noopener"
+          style="font-size: 0.82rem; color: var(--green-light); text-decoration: none;
+                 display: inline-flex; align-items: center; gap: 5px; font-weight: 600;"
+        >
+          Read the WPI announcement
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
       </div>
+
+      <!-- Right: USDA logo in white card -->
+      <div style="flex-shrink: 0; background: rgba(255,255,255,0.95);
+                  border-radius: 12px; padding: 32px 40px;
+                  display: flex; align-items: center; justify-content: center;">
+        <img
+          src="images/usda.png"
+          alt="U.S. Department of Agriculture"
+          style="width: 180px; height: auto; display: block;"
+          loading="lazy"
+        >
+      </div>
+
     </div>
-  </section>
+
+    <!-- Partnership CTA -->
+    <hr style="border: none; border-top: 1px solid var(--border); margin-bottom: 40px;">
+
+    <p style="font-size: 0.97rem; font-weight: 600; color: var(--text); margin-bottom: 8px;">
+      Interested in supporting SoilX?
+    </p>
+    <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.75;
+              max-width: 480px; margin-bottom: 20px;">
+      We welcome partnerships with organizations working in soil science,
+      precision agriculture, and remote sensing.
+    </p>
+    <a
+      href="mailto:rezaz@wpi.edu"
+      style="display: inline-block; background: var(--green-main); color: white;
+             text-decoration: none; padding: 10px 24px; border-radius: 8px;
+             font-size: 0.88rem; font-weight: 600;"
+    >Get in touch</a>
+
+  </div>
+</section>
 </main>
 
 <footer>
