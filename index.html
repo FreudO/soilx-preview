@@ -221,6 +221,7 @@
           src="images/content/homepage_ml_approach.webp"
           alt="Machine learning signal processing visualization"
           loading="lazy"
+          style="object-position: center center;"
         >
         <div class="mag-block-overlay"></div>
         <div class="mag-block-content">
@@ -239,29 +240,53 @@
 </section>
 
 <!-- Lab -->
-<section class="section section-alt">
+<section class="lab-section">
   <div class="container">
-    <h2 class="section-heading">The SoilX Lab</h2>
-    <p class="lab-intro">An in-situ laboratory at WPI for controlled soil measurements. We excavated a 30×20×3 ft area and equipped it for precise GPR data collection — enabling labeled datasets for supervised machine learning.</p>
-    <div class="lab-gallery">
-      <img src="images/content/homepage_lab_setup_1.webp" alt="SoilX lab setup view 1">
-      <img src="images/content/homepage_lab_setup_2.webp" alt="SoilX lab setup view 2">
-      <img src="images/content/homepage_lab_setup_3.webp" alt="SoilX lab setup view 3">
-    </div>
-  </div>
-</section>
 
-<!-- Synthetic data -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-heading">Synthetic Data Generation</h2>
-    <div class="synthetic-grid">
-      <div class="synthetic-grid__text">
-        <p>Synthetic data is generated using gprMax software, based on Maxwell equations and FDTD models. This augments real measurements, enabling robust ML model training across diverse soil conditions.</p>
+    <div class="lab-inner">
+
+      <!-- Left: text + bold stat -->
+      <div class="lab-text-col animate-on-scroll">
+        <p class="lab-eyebrow">In-situ facility · WPI</p>
+        <h2 class="lab-heading">The SoilX Lab</h2>
+        <div class="lab-stat-block">
+          <p class="lab-stat-num">30 <span class="lab-stat-x">×</span> 20 <span class="lab-stat-x">×</span> 3</p>
+          <p class="lab-stat-unit">feet — excavated test area</p>
+        </div>
+        <p class="lab-description">
+          An in-situ laboratory at WPI for controlled soil measurements.
+          We excavated and equipped a 30×20×3 ft area for precise GPR
+          data collection — enabling labeled datasets for supervised
+          machine learning under real soil conditions.
+        </p>
       </div>
-      <div class="synthetic-grid__media">
-        <img src="images/content/homepage_fdtd_geometry.webp" alt="FDTD geometry for GPR synthetic data generation">
+
+      <!-- Right: image grid -->
+      <div class="lab-image-col animate-on-scroll">
+        <div class="lab-image-grid">
+          <img
+            src="images/content/homepage_lab_setup_1.webp"
+            alt="SoilX lab field setup"
+            class="lab-img lab-img-main"
+            loading="lazy"
+          >
+          <div class="lab-img-pair">
+            <img
+              src="images/content/homepage_lab_setup_2.webp"
+              alt="GPR equipment on rails"
+              class="lab-img"
+              loading="lazy"
+            >
+            <img
+              src="images/content/homepage_lab_setup_3.webp"
+              alt="Team with drone in field"
+              class="lab-img"
+              loading="lazy"
+            >
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -332,7 +357,6 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="images/logo.webp" alt="SoilX" height="48" style="filter:brightness(0) invert(1); margin-bottom:12px;">
         <p style="font-size:0.9rem; opacity:0.75; max-width:240px;">Intelligent drone-borne GPR for precision agriculture and soil moisture mapping.</p>
       </div>
       <div>
