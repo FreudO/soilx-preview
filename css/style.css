@@ -873,13 +873,26 @@ footer {
     gap: 32px;
   }
   .lab-stat-block { display: block; }
-  .lab-image-grid { height: 260px; }
-  .lab-img-pair { height: 260px; }
   .lab-description { max-width: 100%; }
+
+  /* Image grid: show only the main image, hide the pair */
+  .lab-image-grid {
+    display: block;
+    height: auto;
+  }
+  .lab-img-main {
+    display: block;
+    width: 100%;
+    height: 220px;
+    grid-row: unset;
+  }
+  .lab-img-pair {
+    display: none;
+  }
 }
+
 @media (max-width: 480px) {
-  .lab-image-grid { height: 200px; }
-  .lab-img-pair { height: 200px; }
+  .lab-img-main { height: 180px; }
 }
 
 /* Publications teaser */
