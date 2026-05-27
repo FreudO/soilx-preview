@@ -1899,3 +1899,569 @@ footer a:hover {
   .member-grid { grid-template-columns: repeat(2, 1fr); }
   .pi-photo-wrap { width: 84px; height: 84px; }
 }
+
+/* ═══════════════════════════════════════════════
+   TABLET & MOBILE  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Global spacing ── */
+  .container {
+    padding: 0 16px;
+  }
+  .section {
+    padding: 52px 0;
+  }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.45rem; }
+
+  /* ── Navigation ── */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px 20px;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 8px;
+    font-size: 0.97rem;
+    color: var(--text);
+  }
+  /* On mobile: underline animation doesn't work — use bg highlight instead */
+  .nav-links a::after {
+    display: none;
+  }
+  .nav-links a.active {
+    background: var(--green-pale);
+    color: var(--green-dark);
+    font-weight: 600;
+  }
+  .nav-links a:hover {
+    background: var(--green-pale);
+    color: var(--green-main);
+  }
+  /* "Join us" CTA pill — full-width on mobile */
+  .nav-links a.nav-cta {
+    background: var(--green-main);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 6px;
+    padding: 12px 14px;
+  }
+  .nav-links a.nav-cta:hover {
+    background: var(--green-dark);
+  }
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* ── Hero section ── */
+  .hero {
+    min-height: 88svh;
+    min-height: 88vh; /* fallback */
+    padding: 0 16px;
+  }
+  .hero-content {
+    padding: 0 4px;
+    max-width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+  .hero-title {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 0;
+  }
+  .hero-buttons .btn,
+  .hero-buttons .btn-outline-white {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  /* Stat pills: wrap to 2×2 */
+  .hero-stats {
+    gap: 8px;
+    margin-top: 28px;
+    justify-content: center;
+  }
+  .hero-stat-pill {
+    flex: 0 0 calc(50% - 4px);
+    max-width: 140px;
+    padding: 10px 12px;
+    border-radius: 12px; /* more rectangular on mobile */
+  }
+  .hero-stat-num { font-size: 1.15rem; }
+  .hero-stat-lbl { font-size: 0.68rem; }
+
+  /* ── Pipeline section ── */
+  .pipeline-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 8px;
+  }
+  .pipeline-step {
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px 0;
+  }
+  .pipeline-icon {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 52px;
+    height: 52px;
+  }
+  .pipeline-step-name {
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+  .pipeline-step-desc {
+    font-size: 0.82rem;
+  }
+  /* Connector becomes a vertical line on the left */
+  .pipeline-connector {
+    width: 2px;
+    height: 20px;
+    margin: 0 0 0 25px; /* 26px = half of 52px icon, minus 1px for border */
+    background: var(--green-light);
+    opacity: 0.8;
+  }
+  .pipeline-intro {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+
+  /* ── Research pillar cards ── */
+  .pillar-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+    gap: 12px;
+  }
+  /* Override the "last child spans full width" tablet rule */
+  .pillar-grid .pillar-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+    margin: 0;
+  }
+  .pillar-card {
+    padding: 20px 18px;
+  }
+
+  /* ── Magazine research blocks ── */
+  .magazine-blocks {
+    border-radius: var(--radius);
+    margin-top: 32px;
+  }
+  .mag-block {
+    height: 230px;
+  }
+  /* On mobile: always fade from bottom so text sits at the bottom */
+  .mag-block-overlay,
+  .mag-block-overlay.right {
+    background: linear-gradient(
+      to top,
+      rgba(15, 60, 18, 0.95) 0%,
+      rgba(27, 94, 32, 0.7) 45%,
+      rgba(27, 94, 32, 0.1) 80%,
+      transparent 100%
+    );
+  }
+  /* Content always pinned to bottom, full width */
+  .mag-block-content,
+  .mag-block-content.right {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 18px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .mag-block-num {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+  .mag-block-title {
+    font-size: 1.05rem;
+    margin-bottom: 0;
+  }
+  /* Hide description text on mobile — title only */
+  .mag-block-text {
+    display: none;
+  }
+
+  /* ── Lab images row ── */
+  .lab-images,
+  .lab-image-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .lab-images img,
+  .lab-image-row img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  /* ── Synthetic data section (2-col → 1 col) ── */
+  .synthetic-row,
+  .fdtd-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .fdtd-image,
+  .synthetic-image {
+    order: -1; /* image above text on mobile */
+    width: 100%;
+    border-radius: var(--radius);
+  }
+
+  /* ── Recent publications strip ── */
+  .pub-strip-item {
+    padding: 16px 10px;
+    gap: 12px;
+  }
+  .pub-strip-title {
+    font-size: 0.88rem;
+  }
+  .pub-strip-meta {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .pub-strip-link {
+    display: none; /* hide the → arrow on small screens */
+  }
+
+  /* ── Page heroes (all inner pages) ── */
+  .page-hero {
+    height: 180px;
+    min-height: 180px;
+  }
+  .page-hero h1 {
+    font-size: 1.7rem;
+  }
+  .page-hero p {
+    font-size: 0.9rem;
+  }
+
+  /* ── Footer ── */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+  .footer-grid img {
+    margin: 0 auto 12px;
+  }
+  .footer-grid ul {
+    align-items: center;
+  }
+
+}
+
+/* ═══════════════════════════════════════════════
+   SMALL PHONES ONLY  (≤ 480px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  .container { padding: 0 12px; }
+  .section { padding: 40px 0; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+
+  /* Hero */
+  .hero { min-height: 92svh; min-height: 92vh; }
+  .hero-title { font-size: 1.55rem; }
+  .hero-sub { font-size: 0.88rem; }
+  .hero-stat-pill {
+    flex: 0 0 calc(50% - 4px);
+    max-width: none;
+    padding: 9px 10px;
+  }
+
+  /* Nav */
+  .nav-links a { font-size: 0.92rem; padding: 10px 14px; }
+
+  /* Magazine blocks */
+  .mag-block { height: 200px; }
+  .mag-block-title { font-size: 0.95rem; }
+
+  /* Pipeline */
+  .pipeline-section { padding: 40px 0; }
+  .pipeline-icon { width: 44px; height: 44px; }
+  .pipeline-connector { margin-left: 21px; }
+
+}
+
+/* ═══════════════════════════════════════════════
+   TEAM PAGE — mobile  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Team page hero ── */
+  .team-quote-banner,
+  .quote-banner {
+    padding: 28px 16px;
+  }
+  .team-quote-text,
+  .quote-text {
+    font-size: 1rem;
+  }
+
+  /* ── PI strip → 1 column ── */
+  .pi-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 32px 0 0;
+  }
+  .pi-card {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+  .pi-photo-wrap {
+    width: 60px;
+    height: 60px;
+  }
+  .pi-card-info h3 {
+    font-size: 0.97rem;
+  }
+  .pi-card-info .role {
+    font-size: 0.78rem;
+  }
+
+  /* ── Team section dividers ── */
+  .team-divider {
+    margin: 32px 0 16px;
+  }
+
+  /* ── Member grid → 2 columns ── */
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .member-card {
+    border-radius: var(--radius);
+  }
+
+  /* ── Section padding on team page ── */
+  .team-section {
+    padding: 40px 0 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  /* Keep 2-col member grid even on smallest phones */
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .pi-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   PUBLICATIONS PAGE — mobile  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Filter bar: wrap and scroll horizontally */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 16px 12px;
+  }
+  .filter-btn {
+    font-size: 0.82rem;
+    padding: 7px 14px;
+  }
+
+  /* Publication cards: reduce padding, keep full width */
+  .pub-card {
+    padding: 16px;
+    border-radius: var(--radius);
+  }
+  .pub-card .pub-title {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+  .pub-card .pub-authors {
+    font-size: 0.78rem;
+  }
+  .pub-card .pub-venue {
+    font-size: 0.78rem;
+  }
+  .pub-card .pub-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  /* Publication card list: full width, reasonable margin */
+  .pub-list,
+  .pub-cards {
+    padding: 0 0;
+    max-width: 100%;
+  }
+
+}
+
+/* ═══════════════════════════════════════════════
+   MEDIA PAGE — mobile  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Tabs: full width, evenly spaced */
+  .media-tabs,
+  .tab-bar {
+    display: flex;
+    width: 100%;
+  }
+  .media-tabs button,
+  .tab-bar button,
+  .tab-btn {
+    flex: 1;
+    font-size: 0.82rem;
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  /* Video grid: 1 column */
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* YouTube facade: full width */
+  .yt-facade {
+    border-radius: var(--radius);
+  }
+
+  /* Image gallery: 1 column */
+  .gallery-grid,
+  .image-gallery {
+    column-count: 1;
+  }
+
+  /* Audio players: full width, reduced padding */
+  .audio-card,
+  .audio-player-card {
+    padding: 16px;
+  }
+
+}
+
+/* ═══════════════════════════════════════════════
+   EDUCATION PAGE — mobile  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Education video grid: 1 column */
+  .edu-video-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+}
+
+/* ═══════════════════════════════════════════════
+   CAREER PAGE — mobile  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* "What we look for" icon cards: 1 column */
+  .qualifications-grid,
+  .career-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Step-by-step numbered list: full width */
+  .apply-steps ol {
+    padding-left: 20px;
+  }
+
+}
+
+/* ═══════════════════════════════════════════════
+   SUPPORTERS PAGE — mobile  (≤ 768px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .supporters-grid,
+  .supporter-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+}
+
+/* ═══════════════════════════════════════════════
+   UNIVERSAL MOBILE SAFETY NET
+   Prevents any grid or flex from overflowing
+   the viewport horizontally on small screens
+   ═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* No element should ever be wider than the viewport */
+  img, video, iframe, .card, .pub-card, .pi-card,
+  .member-card, .pillar-card, .yt-facade {
+    max-width: 100%;
+  }
+
+  /* Kill any horizontal overflow that slipped through */
+  body { overflow-x: hidden; }
+  .container { overflow-x: hidden; }
+
+  /* Ensure all grids collapse to 1 col if not explicitly overridden above */
+  [class*="-grid"]:not(.member-grid):not(.pillar-grid) {
+    grid-template-columns: 1fr !important;
+  }
+
+}
