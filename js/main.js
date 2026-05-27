@@ -64,9 +64,9 @@
   }
 
   function initYouTubeFacades() {
-    document.querySelectorAll('.yt-facade').forEach((facade) => {
+    document.querySelectorAll('.yt-facade, .edu-video').forEach((facade) => {
       const play = () => {
-        const id = facade.dataset.videoId;
+        const id = facade.dataset.videoId || facade.dataset.vid;
         if (!id || facade.dataset.loaded) return;
         facade.dataset.loaded = 'true';
         facade.innerHTML =

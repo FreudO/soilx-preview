@@ -26,61 +26,258 @@
   </div>
 </nav>
 
-<section class="page-hero">
-  <div class="page-hero__inner">
-    <h1>Training &amp; Education</h1>
-    <p class="page-hero__subtitle">Educational materials and tutorials on GPR, soil science, and AI</p>
+<!-- ── Page hero ── -->
+<section style="background: linear-gradient(135deg, #1B5E20, #2E7D32); padding: 72px 24px; text-align: center;">
+  <p style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #A5D6A7; margin-bottom: 12px;">SoilX · Learning Resources</p>
+  <h1 style="color: #ffffff; font-size: clamp(1.7rem, 4vw, 2.6rem); margin-bottom: 16px; max-width: 640px; margin-left: auto; margin-right: auto;">Learn drone-borne GPR & AI for precision agriculture</h1>
+  <p style="color: rgba(255,255,255,0.78); font-size: 1rem; max-width: 580px; margin: 0 auto; line-height: 1.7;">
+    Educational videos covering ground penetrating radar, soil moisture science,
+    machine learning signal processing, and drone integration —
+    from fundamentals through research-level concepts.
+  </p>
+</section>
+
+<!-- ── Learning path ── -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="container">
+    <h2 class="section-heading animate-on-scroll">Learning path</h2>
+    <div class="edu-path">
+      <div class="edu-path-step">
+        <div class="edu-path-dot"></div>
+        <p class="edu-path-label">GPR fundamentals</p>
+      </div>
+      <div class="edu-path-line"></div>
+      <div class="edu-path-step">
+        <div class="edu-path-dot"></div>
+        <p class="edu-path-label">Soil moisture science</p>
+      </div>
+      <div class="edu-path-line"></div>
+      <div class="edu-path-step">
+        <div class="edu-path-dot"></div>
+        <p class="edu-path-label">ML signal processing</p>
+      </div>
+      <div class="edu-path-line"></div>
+      <div class="edu-path-step">
+        <div class="edu-path-dot"></div>
+        <p class="edu-path-label">Drone integration</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<main class="education-page">
-  <section class="section">
-    <div class="container">
-      <p class="page-intro">The SoilX lab provides open training materials for students and researchers interested in ground penetrating radar, soil moisture science, and machine learning applications in agriculture.</p>
+<!-- ── Modules ── -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading animate-on-scroll">Modules</h2>
 
-      <div class="edu-video-grid">
-        <article class="video-card card">
-          <div class="yt-facade" data-video-id="-jE4pZHq6eA" role="button" tabindex="0" aria-label="Play Introduction to GPR Fundamentals">
-            <img src="https://i.ytimg.com/vi/-jE4pZHq6eA/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <span class="yt-facade__play" aria-hidden="true"></span>
-          </div>
-          <h3 class="video-card__title">Introduction to GPR Fundamentals</h3>
-        </article>
-        <article class="video-card card">
-          <div class="yt-facade" data-video-id="nspFX0Tjny8" role="button" tabindex="0" aria-label="Play Soil Moisture Measurement Techniques">
-            <img src="https://i.ytimg.com/vi/nspFX0Tjny8/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <span class="yt-facade__play" aria-hidden="true"></span>
-          </div>
-          <h3 class="video-card__title">Soil Moisture Measurement Techniques</h3>
-        </article>
-        <article class="video-card card">
-          <div class="yt-facade" data-video-id="SajlXrCpPhQ" role="button" tabindex="0" aria-label="Play Machine Learning for GPR Signal Analysis">
-            <img src="https://i.ytimg.com/vi/SajlXrCpPhQ/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <span class="yt-facade__play" aria-hidden="true"></span>
-          </div>
-          <h3 class="video-card__title">Machine Learning for GPR Signal Analysis</h3>
-        </article>
-        <article class="video-card card">
-          <div class="yt-facade" data-video-id="ZH5AYvQ_grE" role="button" tabindex="0" aria-label="Play Drone Integration &amp; Data Acquisition">
-            <img src="https://i.ytimg.com/vi/ZH5AYvQ_grE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
-            <span class="yt-facade__play" aria-hidden="true"></span>
-          </div>
-          <h3 class="video-card__title">Drone Integration &amp; Data Acquisition</h3>
-        </article>
-      </div>
-    </div>
-  </section>
+    <div class="edu-module-grid">
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="edu-cta">
-        <h2>Interested in joining the lab?</h2>
-        <p>Explore open research opportunities and learn how to apply to the SoilX team at WPI.</p>
-        <a href="career.html" class="btn">View Career Opportunities</a>
+      <!-- Module 01 -->
+      <div class="edu-module animate-on-scroll">
+        <div class="edu-module-header">
+          <span class="edu-module-num">Module 01</span>
+          <div class="edu-module-tags">
+            <span class="edu-tag">Beginner</span>
+            <span class="edu-tag">Hardware</span>
+          </div>
+        </div>
+        <h3 class="edu-module-title">Introduction to GPR fundamentals</h3>
+        <p class="edu-module-desc">
+          How ground penetrating radar works — electromagnetic pulse propagation,
+          signal reflection, and the basics of subsurface imaging.
+        </p>
+        <!-- YouTube facade — loads iframe only on click -->
+        <div class="yt-facade edu-video" data-vid="-jE4pZHq6eA">
+          <img
+            src="https://i.ytimg.com/vi/-jE4pZHq6eA/hqdefault.jpg"
+            alt="Introduction to GPR Fundamentals"
+            loading="lazy"
+          >
+          <button class="yt-play-btn" aria-label="Play video"></button>
+        </div>
+        <div class="edu-module-footer">
+          <a href="publications.html" class="edu-module-link">View related publications →</a>
+        </div>
       </div>
+
+      <!-- Module 02 -->
+      <div class="edu-module animate-on-scroll">
+        <div class="edu-module-header">
+          <span class="edu-module-num">Module 02</span>
+          <div class="edu-module-tags">
+            <span class="edu-tag">Beginner</span>
+            <span class="edu-tag">Soil science</span>
+          </div>
+        </div>
+        <h3 class="edu-module-title">Soil moisture measurement techniques</h3>
+        <p class="edu-module-desc">
+          Understanding root-zone moisture, dielectric properties of soil,
+          and how water content affects GPR signal behavior underground.
+        </p>
+        <div class="yt-facade edu-video" data-vid="nspFX0Tjny8">
+          <img
+            src="https://i.ytimg.com/vi/nspFX0Tjny8/hqdefault.jpg"
+            alt="Soil Moisture Measurement Techniques"
+            loading="lazy"
+          >
+          <button class="yt-play-btn" aria-label="Play video"></button>
+        </div>
+        <div class="edu-module-footer">
+          <a href="pdfs/orss2023_soil_water_content_estimation.pdf" target="_blank" rel="noopener" class="edu-module-link">Read: Soil Water Content Estimation (PDF) →</a>
+        </div>
+      </div>
+
+      <!-- Module 03 -->
+      <div class="edu-module animate-on-scroll">
+        <div class="edu-module-header">
+          <span class="edu-module-num">Module 03</span>
+          <div class="edu-module-tags">
+            <span class="edu-tag">Intermediate</span>
+            <span class="edu-tag">ML / AI</span>
+          </div>
+        </div>
+        <h3 class="edu-module-title">Machine learning for GPR signal analysis</h3>
+        <p class="edu-module-desc">
+          From raw radar signals to classified 3D moisture maps —
+          how machine learning models are trained and applied to GPR data.
+        </p>
+        <div class="yt-facade edu-video" data-vid="SajlXrCpPhQ">
+          <img
+            src="https://i.ytimg.com/vi/SajlXrCpPhQ/hqdefault.jpg"
+            alt="Machine Learning for GPR Signal Analysis"
+            loading="lazy"
+          >
+          <button class="yt-play-btn" aria-label="Play video"></button>
+        </div>
+        <div class="edu-module-footer">
+          <a href="pdfs/advancing_precision_agriculture_gpr_ml.pdf" target="_blank" rel="noopener" class="edu-module-link">Read: ML-Enhanced GPR Analysis (PDF) →</a>
+        </div>
+      </div>
+
+      <!-- Module 04 -->
+      <div class="edu-module animate-on-scroll">
+        <div class="edu-module-header">
+          <span class="edu-module-num">Module 04</span>
+          <div class="edu-module-tags">
+            <span class="edu-tag">Advanced</span>
+            <span class="edu-tag">Hardware</span>
+          </div>
+        </div>
+        <h3 class="edu-module-title">Drone integration & data acquisition</h3>
+        <p class="edu-module-desc">
+          Mounting GPR on drone platforms, flight planning for data coverage,
+          and capturing synchronized radar measurements in the field.
+        </p>
+        <div class="yt-facade edu-video" data-vid="ZH5AYvQ_grE">
+          <img
+            src="https://i.ytimg.com/vi/ZH5AYvQ_grE/hqdefault.jpg"
+            alt="Drone Integration & Data Acquisition"
+            loading="lazy"
+          >
+          <button class="yt-play-btn" aria-label="Play video"></button>
+        </div>
+        <div class="edu-module-footer">
+          <a href="pdfs/wisee2024_intelligent_adaptive_airborne_gpr.pdf" target="_blank" rel="noopener" class="edu-module-link">Read: Intelligent Adaptive Airborne GPR (PDF) →</a>
+        </div>
+      </div>
+
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<!-- ── Tools & Software ── -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-heading animate-on-scroll">Tools used in this research</h2>
+    <p style="color: var(--text-muted); max-width: 600px; margin-bottom: 36px; font-size: 0.97rem;">
+      The SoilX lab uses these tools for simulation, data collection, and analysis.
+    </p>
+    <div class="edu-tools-grid">
+
+      <div class="edu-tool-card animate-on-scroll">
+        <div class="edu-tool-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 class="edu-tool-name">gprMax</h3>
+        <p class="edu-tool-desc">
+          Open-source software for simulating GPR using the Finite-Difference
+          Time-Domain (FDTD) method. Used by SoilX to generate synthetic
+          training data based on Maxwell's equations.
+        </p>
+        <a href="https://www.gprmax.com" target="_blank" rel="noopener" class="edu-tool-link">gprmax.com ↗</a>
+      </div>
+
+      <div class="edu-tool-card animate-on-scroll">
+        <div class="edu-tool-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3 class="edu-tool-name">Research publications</h3>
+        <p class="edu-tool-desc">
+          All SoilX findings are documented in peer-reviewed journal articles
+          and conference papers. The publications page has PDFs available
+          for free download.
+        </p>
+        <a href="publications.html" class="edu-tool-link">Browse publications →</a>
+      </div>
+
+      <div class="edu-tool-card animate-on-scroll">
+        <div class="edu-tool-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3 class="edu-tool-name">Interested in joining?</h3>
+        <p class="edu-tool-desc">
+          If these topics interest you and you want to work on this research,
+          the SoilX lab is open to motivated graduate and undergraduate students.
+        </p>
+        <a href="career.html" class="edu-tool-link">See open positions →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Glossary ── -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading animate-on-scroll">Key concepts</h2>
+    <p style="color: var(--text-muted); max-width: 600px; margin-bottom: 36px; font-size: 0.97rem;">
+      Common terms used across the SoilX research and educational materials.
+    </p>
+    <div class="edu-glossary animate-on-scroll">
+
+      <div class="edu-glossary-item">
+        <p class="edu-glossary-term">GPR — Ground Penetrating Radar</p>
+        <p class="edu-glossary-def">A non-invasive sensing technique that uses electromagnetic pulses to image structures beneath the surface. SoilX uses it to map root-zone soil moisture.</p>
+      </div>
+
+      <div class="edu-glossary-item">
+        <p class="edu-glossary-term">FDTD — Finite-Difference Time-Domain</p>
+        <p class="edu-glossary-def">A numerical method for solving Maxwell's equations that simulates how electromagnetic waves travel through materials. Used in gprMax to generate synthetic GPR data.</p>
+      </div>
+
+      <div class="edu-glossary-item">
+        <p class="edu-glossary-term">Soil Water Content (SWC)</p>
+        <p class="edu-glossary-def">The volumetric fraction of water in a soil sample. The primary quantity SoilX's drone-borne GPR system is designed to estimate across large agricultural fields.</p>
+      </div>
+
+      <div class="edu-glossary-item">
+        <p class="edu-glossary-term">A-scan / B-scan</p>
+        <p class="edu-glossary-def">An A-scan is a single GPR trace at one point — amplitude vs. time. A B-scan is a 2D cross-section built by collecting many A-scans along a line of travel.</p>
+      </div>
+
+      <div class="edu-glossary-item">
+        <p class="edu-glossary-term">Dielectric permittivity</p>
+        <p class="edu-glossary-def">A property of materials describing how they respond to an electric field. Water has a much higher permittivity than dry soil, which is how GPR detects moisture.</p>
+      </div>
+
+      <div class="edu-glossary-item">
+        <p class="edu-glossary-term">Root zone</p>
+        <p class="edu-glossary-def">The subsurface region (typically the top 1–3 ft) where plant roots grow and where water availability directly determines crop health and irrigation needs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="container">
