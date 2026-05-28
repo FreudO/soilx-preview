@@ -1857,6 +1857,11 @@ footer {
   background: var(--green-pale);
   font-size: 1.5rem;
 }
+.career-trait-card__icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--green-main);
+}
 
 .career-trait-card h3 {
   font-size: 1.05rem;
